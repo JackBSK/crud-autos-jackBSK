@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+</head>
+<body>
+  <div class="container"><h1>Crud autos</h1></div>
+  <div class="container">
+    <div class="card p-2">
+      <form onsubmit="event.preventDefault(); submitCar();">
+        <div class="row">
+          <div class="col-4 mb-3">
+            <label class="form-label">Marca del auto</label>
+            <input type="text" id="branch" placeholder="Ej.Nissan" class="form-control">
+          </div>
+          <div class="col-4 mb-3">
+            <label class="form-label">Modelo</label>
+            <input type="text" id="model" placeholder="Ej. Versa" class="form-control">
+          </div>
+          <div class="col-4 mb-3">
+            <label class="form-label">Año</label>
+            <input type="number" id="year" min="1889" max="2021" step="1" value="2020" class="form-control">
+          </div>
+          <div class="col-4 mb-3">
+            <label class="form-label">Color</label>
+            <input type="text" id="color" placeholder="Ej. morado" class="form-control">
+          </div>
+          <div class="col-4 mb-3">
+            <label class="form-label">Precio</label>
+            <input type="number" id="price" step="0.001" placeholder="$Mxn" class="form-control">
+          </div>
+          <div class="col-4 mb-3">
+            <label class="form-label">Imagen</label>
+            <input type="text" id="imgCar" placeholder="url" class="form-control">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline-success">Agregar</button>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+    <table class="table" id="car-list">
+      <thead>
+        <tr>
+          <th scope="col">Marca</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Año</th>
+          <th scope="col">Color</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</body>
+<script src="./js/cars.js"></script>
+</html>
